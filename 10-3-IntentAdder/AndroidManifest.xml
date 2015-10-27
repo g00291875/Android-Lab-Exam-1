@@ -1,0 +1,42 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.intentdemo2b"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="labExam1"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".mainActivity"
+            android:label="labExam1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity 
+            android:name=".Activity1"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+                android:name=".Activity2"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <activity
+                android:name=".Activity3"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="mdp://gmit.computer.ie/pe1" android:host="com.example.intentdemob" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
